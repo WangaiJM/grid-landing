@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/inter/inter-variable.ttf");
+}
+
+:root {
+  // colors
+  --white: 0, 0%, 100%;
+  --black: 0, 0%, 0%;
+
+  --blue-200: 224, 100%, 95%;
+  --blue-400: 220, 100%, 64%;
+  --blue-600: 228, 100%, 60%;
+  --blue-700: 228, 99%, 58%;
+  // typography
+  --fs-1: 6rem;
+  --fs-2: 4.4rem;
+  --fs-3: 3.6rem;
+  --fs-4: 3.2rem;
+  --fs-5: 1.7rem;
+  --fs-5: 1.4rem;
+
+  --fw-r: 400;
+  --fw-m: 500;
+  --fw-b: 700;
+
+  --ls-1: 0;
+  --ls-2: -2px;
+
+  // spacing
+  --spacing-100: 0.8rem;
+  --spacing-200: 1.6rem;
+  --spacing-300: 2.4rem;
+  --spacing-400: 3.2rem;
+  --spacing-500: 4rem;
+  --spacing-600: 4.8rem;
+  --spacing-600: 5.6rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
