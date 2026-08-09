@@ -4,7 +4,7 @@ header {
   @include flex(row);
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid hsl(var(--blue-400));
+  border-bottom: var(--stroke);
   padding: var(--spacing-300);
   @include breakpoint("tablet") {
     padding: var(--spacing-300) var(--spacing-600);

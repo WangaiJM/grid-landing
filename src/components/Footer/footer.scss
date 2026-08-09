@@ -1,0 +1,18 @@
+@use "../../index.scss" as *;
+
+footer {
+  @include flex(column);
+  padding: var(--spacing-300);
+
+  p {
+    @include text-preset-6;
+    font-weight: var(--fw-m);
+  }
+
+  @include breakpoint("tablet") {
+    @include flex(row);
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-300) var(--spacing-600);
+  }
+}
