@@ -47,7 +47,69 @@
     scroll-behavior: auto !important;
   }
 }
+// text-presets
+@mixin text-preset-1 {
+  font-size: var(--fs-1);
+  font-weight: var(--fw-r);
+  letter-spacing: var(--ls-2);
+  line-height: 1.6;
+}
+@mixin text-preset-2 {
+  font-size: var(--fs-2);
+  font-weight: var(--fw-r);
+  letter-spacing: var(--ls-2);
+  line-height: 1.6;
+}
+@mixin text-preset-3 {
+  font-size: var(--fs-3);
+  font-weight: var(--fw-r);
+  letter-spacing: var(--ls-1);
+  line-height: 1.1;
+}
+@mixin text-preset-4 {
+  font-size: var(--fs-4);
+  font-weight: var(--fw-r);
+  letter-spacing: var(--ls-2);
+  line-height: 1.6;
+}
+@mixin text-preset-5 {
+  font-size: var(--fs-5);
+  letter-spacing: var(--ls-1);
+  line-height: 1.4;
+}
+@mixin text-preset-6 {
+  font-size: var(--fs-6);
+  letter-spacing: var(--ls-1);
+  line-height: 1.4;
+}
 
+@mixin breakpoint($media) {
+  @if $media == "tablet" {
+    @media (min-width: 25rem) {
+      @content;
+    }
+  } @else if $media == "desktop" {
+    @media (min-width: 56.25rem) {
+      @content;
+    }
+  }
+}
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin grid($column: 1fr) {
+  display: grid;
+  grid-template-columns: $column;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  font: inherit;
+}
 *,
 *::before,
 *::after {
@@ -58,4 +120,11 @@
 
 html {
   font-size: 62.5%;
+}
+body {
+  font-size: 1.7rem;
+  background-color: hsl(var(--blue-700));
+  color: hsl(var(--white));
+  max-width: 144rem;
+  margin: auto;
 }

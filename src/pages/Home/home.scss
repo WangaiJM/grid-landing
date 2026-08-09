@@ -1,0 +1,11 @@
+@use "../../index.scss" as *;
+
+main {
+  @include flex(column);
+  @include breakpoint("desktop") {
+    @include flex(row);
+    & > * {
+      flex: 1;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use "../../index.scss" as *;
+
+header {
+  @include flex(row);
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid hsl(var(--blue-400));
+  padding: var(--spacing-300);
+  @include breakpoint("tablet") {
+    padding: var(--spacing-300) var(--spacing-600);
+  }
+
+  h2 {
+    @include text-preset-6;
+    font-weight: var(--fw-m);
+  }
+  button {
+    background-color: transparent;
+    border: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+  }
+}
