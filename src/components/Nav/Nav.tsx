@@ -1,8 +1,14 @@
+import { useContext } from "react";
 import "./nav.scss";
+import { NavContext } from "../../context/NavContext/NavContext";
 
 const Nav = () => {
+  const context = useContext(NavContext);
+  if (!context) throw new Error("No context!!");
+
+  const { active } = context;
   return (
-    <nav>
+    <nav className={active.active ? "active" : ""}>
       <ul className="nav-items">
         <li className="nav-item">
           <a href="/about">About</a>

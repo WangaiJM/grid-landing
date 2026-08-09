@@ -6,8 +6,13 @@ nav {
   width: 100%;
   padding: var(--spacing-400);
   right: 0;
-  transform: all 3s ease;
   z-index: 1000;
+  transform: translateX(100%);
+  transition: all 1s ease;
+
+  &.active {
+    transform: translateX(0);
+  }
 
   @include breakpoint("tablet") {
     width: 40rem;

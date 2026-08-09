@@ -122,6 +122,7 @@ body {
   color: hsl(var(--white));
   max-width: 144rem;
   margin: auto;
+  overflow-x: hidden;
 }
 ul {
   list-style: none;
