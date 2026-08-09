@@ -1,0 +1,29 @@
+@use "../../index.scss" as *;
+
+nav {
+  position: absolute;
+  background-color: hsl(var(--blue-700));
+  width: 100%;
+  padding: var(--spacing-400);
+  right: 0;
+  transform: all 3s ease;
+  z-index: 1000;
+
+  @include breakpoint("tablet") {
+    width: 40rem;
+    height: 100%;
+  }
+
+  .nav-items {
+    height: 34rem;
+    @include flex(column);
+    align-items: center;
+    @include text-preset-4;
+  }
+  .nav-item {
+    margin-bottom: var(--spacing-200);
+    a {
+      cursor: pointer;
+    }
+  }
+}
