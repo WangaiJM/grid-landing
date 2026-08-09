@@ -1,26 +1,32 @@
 # Grid Landing
 
-A project by frontend mentor [Grid landing page](https://www.frontendmentor.io/challenges/grid-landing-page)
-
 ## Objectives
+
+The main objectives for this project were to:
 
 - Animate the menu panel so it slides in from the edge
 - Count the stat numbers up from zero on page load
 - Trap keyboard focus inside the open menu
-- Respect prefers-reduced-motion
+- Respect `prefers-reduced-motion`
 - Load the four stats from a JSON file
 
-since overlay is on the body, I was suprised i had to use useContext, I am realising its applications are quite extensive than I had expected.
+## What I Learned
 
-The two concepts to look into:
+One thing that surprised me during this project was how useful `useContext` can be.
 
-- Trap keyboard focus inside the open menu
-- Count the stat numbers up from zero on page load
+Since the navigation overlay is rendered on the body, controlled by button on header and nav is it's own component. I had to use `useContext`. I wasn't expecting that. I realised that `useContext` has much broader applications than I had originally expected.
+
+### Concepts I Want to Explore Further
+
+There are two concepts from this project that I want to understand more deeply:
+
+- **Trapping keyboard focus inside an open menu**
+- **Counting stat numbers up from zero on page load**
 
 ## Repository
 
-[Grid Landing ](https://github.com/WangaiJM/grid-landing)
+[Grid Landing](https://github.com/WangaiJM/grid-landing)
 
-## live
+## Live Site
 
-[Grid Landing Live Site]()
+[Grid Landing Live Site](https://grid-landing-tss.netlify.app/)

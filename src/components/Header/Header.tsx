@@ -24,7 +24,14 @@ const Header = () => {
         <h2 id="head-title">
           <a href="/">● Bridge Collective</a>
         </h2>
-        <button onClick={handleNav}>
+        <button
+          onClick={handleNav}
+          aria-controls="primary-navigation"
+          aria-expanded={active.active}
+          aria-label={
+            active.active ? "Close navigation menu" : "Open navigation menu"
+          }
+        >
           {active.active ? (
             <img src={Close} alt="" />
           ) : (

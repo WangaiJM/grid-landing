@@ -8,7 +8,12 @@ const Nav = () => {
 
   const { active } = context;
   return (
-    <nav className={active.active ? "active" : ""}>
+    <nav
+      className={active.active ? "active" : ""}
+      aria-label="Primary navigation"
+      id="primary-navigation"
+      aria-hidden={!active.active}
+    >
       <ul className="nav-items">
         <li className="nav-item">
           <a href="/about">About</a>
