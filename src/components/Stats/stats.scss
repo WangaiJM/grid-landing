@@ -1,0 +1,43 @@
+@use "../../index.scss" as *;
+
+.stats {
+  @include grid;
+
+  @include breakpoint("tablet") {
+    @include grid($column: 1fr 1fr);
+  }
+
+  &-card {
+    @include flex(column);
+    justify-content: space-between;
+    height: 37.5rem;
+    border-bottom: var(--stroke);
+    padding: var(--spacing-300);
+    @include breakpoint("tablet") {
+      padding: var(--spacing-400);
+      border-right: var(--stroke);
+    }
+
+    &__header {
+      @include flex(row);
+      justify-content: space-between;
+      align-items: center;
+
+      h3 {
+        @include text-preset-3;
+      }
+    }
+    &__footer {
+      @include flex(column);
+
+      h4 {
+        @include text-preset-5;
+        font-weight: var(-fw-m);
+      }
+      p {
+        @include text-preset-6;
+        color: hsl(var(--blue-200));
+      }
+    }
+  }
+}

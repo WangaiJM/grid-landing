@@ -7,7 +7,7 @@
   padding: var(--spacing-600) var(--spacing-400);
 
   @include breakpoint("tablet") {
-    height: 54rem;
+    min-height: 54rem;
     justify-content: center;
 
     & > * {
