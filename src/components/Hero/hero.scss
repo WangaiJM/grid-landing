@@ -1,0 +1,33 @@
+@use "../../index.scss" as *;
+
+.hero {
+  @include flex(column);
+  gap: var(--spacing-300);
+  border-bottom: var(--stroke);
+  padding: var(--spacing-600) var(--spacing-400);
+
+  @include breakpoint("tablet") {
+    height: 54rem;
+    justify-content: center;
+
+    & > * {
+      width: 50%;
+    }
+  }
+
+  @include breakpoint("desktop") {
+    border-right: var(--stroke);
+  }
+
+  h1 {
+    @include text-preset-2;
+    @include breakpoint("tablet") {
+      @include text-preset-1;
+    }
+  }
+
+  p {
+    @include text-preset-5;
+    color: hsl(var(--blue-200));
+  }
+}
