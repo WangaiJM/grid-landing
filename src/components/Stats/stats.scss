@@ -32,7 +32,7 @@
 
       h4 {
         @include text-preset-5;
-        font-weight: var(-fw-m);
+        font-weight: var(--fw-m);
       }
       p {
         @include text-preset-6;

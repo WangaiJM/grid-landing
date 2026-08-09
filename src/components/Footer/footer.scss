@@ -2,7 +2,7 @@
 
 footer {
   @include flex(column);
-  padding: var(--spacing-300);
+  padding: var(--spacing-300) var(--spacing-300);
 
   p {
     @include text-preset-6;
